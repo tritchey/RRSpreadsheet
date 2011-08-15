@@ -1,0 +1,177 @@
+<html><head><title>Methods</title></head><body bgcolor="#ffffff"><font face="Geneva,Arial,Helvtica"><h1>Methods</h1></font><hr><br>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/cornerView"></a>
+<h3><a name="cornerView">cornerView</a></h3>
+<b>Abstract:</b> returns the upper left view of the spreadsheet
+
+<blockquote><pre><tt>- (NSView*)<B>cornerView;</B> </tt><br>
+</pre></blockquote>
+<p></p>
+<b>Result:</b> returns the corner view of the spreadsheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/currentWorksheet"></a>
+<h3><a name="currentWorksheet">currentWorksheet</a></h3>
+<b>Abstract:</b> returns the current worksheet
+
+<blockquote><pre><tt>- (id)<B>currentWorksheet;</B> </tt><br>
+</pre></blockquote>
+<p>returns the worksheet currently being displayed by the spreadsheet
+</p>
+<b>Result:</b> returns the current worksheet object
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/headerLabelsEditable"></a>
+<h3><a name="headerLabelsEditable">headerLabelsEditable</a></h3>
+<b>Abstract:</b> get the editability of header labels
+
+<blockquote><pre><tt>- (BOOL)<B>headerLabelsEditable;</B> </tt><br>
+</pre></blockquote>
+<p>returns a boolean value indicating whether the row and column
+header labels are editable
+</p>
+<b>Result:</b> returns a BOOL, YES = headers can be edited, NO = headers cannot be edited
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/lowerLeftView"></a>
+<h3><a name="lowerLeftView">lowerLeftView</a></h3>
+<b>Abstract:</b> returns the lower left view of the spreadsheet
+
+<blockquote><pre><tt>- (NSView*)<B>lowerLeftView;</B> </tt><br>
+</pre></blockquote>
+<p>this method returns the view being used to fill the lower left corner of the spreadsheet
+</p>
+<b>Result:</b> returns the lower left view of the spreadsheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/newWorksheet:"></a>
+<h3><a name="newWorksheet:">newWorksheet:</a></h3>
+<b>Abstract:</b> create a new worksheet
+
+<blockquote><pre><tt>- (id)<B>newWorksheet:</B>(NSString*)<I>label;</I> </tt><br>
+</pre></blockquote>
+<p>This method creates and returns a new worksheet after setting
+it as the current worksheet of the spreadsheet
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>label</tt></td><td>an NSString* holding the name of the new worksheet</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> returns the new worksheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/setCornerView:"></a>
+<h3><a name="setCornerView:">setCornerView:</a></h3>
+<b>Abstract:</b> Set the upper left corner view of the spreadsheet
+
+<blockquote><pre><tt>- (void)<B>setCornerView:</B>(NSView*)<I>aView;</I> </tt><br>
+</pre></blockquote>
+<p>Use this method to change the upper left corner of the spreadsheet to a custom view
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>aView</tt></td><td>the view to be placed in the upper left corner</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/setCurrentWorksheet:"></a>
+<h3><a name="setCurrentWorksheet:">setCurrentWorksheet:</a></h3>
+<b>Abstract:</b> set the current worksheet object
+
+<blockquote><pre><tt>- (void)<B>setCurrentWorksheet:</B>(RRSSWorksheet*)<I>worksheet;</I> </tt><br>
+</pre></blockquote>
+<p>tells the spreadsheet to set the 'worksheet' object as the
+currently displayed worksheet in the spreadsheet view
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>worksheet</tt></td><td>the RRSSWorksheet object to become the current worksheet</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/setHeaderLabelsEditable:"></a>
+<h3><a name="setHeaderLabelsEditable:">setHeaderLabelsEditable:</a></h3>
+<b>Abstract:</b> set editability of header labels
+
+<blockquote><pre><tt>- (void)<B>setHeaderLabelsEditable:</B>(BOOL)<I>editable;</I> </tt><br>
+</pre></blockquote>
+<p>this method determines whether the user is able to edit the
+header labels of the rows and columns of the spreadsheet
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>editable</tt></td><td>YES = headers can be edited, NO = header cannot be edited</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/setLowerLeftView:"></a>
+<h3><a name="setLowerLeftView:">setLowerLeftView:</a></h3>
+<b>Abstract:</b> set the lower left corner view of the spreadsheet
+
+<blockquote><pre><tt>- (void)<B>setLowerLeftView:</B>(NSView*)<I>aView;</I> </tt><br>
+</pre></blockquote>
+<p>Use this method to change the lower left corner of the spreadsheet to a custom view
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>aView</tt></td><td>the view to be used as the lower left corner of the spreadsheet</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/setUpperRightView:"></a>
+<h3><a name="setUpperRightView:">setUpperRightView:</a></h3>
+<b>Abstract:</b> set the upper right corner view of the spreadsheet
+
+<blockquote><pre><tt>- (void)<B>setUpperRightView:</B>(NSView*)<I>aView;</I> </tt><br>
+</pre></blockquote>
+<p>Use this method to change the upper right corner of the spreadsheet to a custom view
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>aView</tt></td><td>the view to be used as the upper right corner of the spreadsheet</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/setupCornerViews"></a>
+<h3><a name="setupCornerViews">setupCornerViews</a></h3>
+<b>Abstract:</b> set up the corner views for the spreadsheet object
+
+<blockquote><pre><tt>- (void)<B>setupCornerViews;</B> </tt><br>
+</pre></blockquote>
+<p>internal method used to create and set up the corner views for the spreadsheet object
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/setupRulers"></a>
+<h3><a name="setupRulers">setupRulers</a></h3>
+<b>Abstract:</b> set up the rulers for the spreadsheet object
+
+<blockquote><pre><tt>- (void)<B>setupRulers;</B> </tt><br>
+</pre></blockquote>
+<p>internal method used to create and set up the rulers for the spreadsheet object
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSpreadSheet/upperRightView"></a>
+<h3><a name="upperRightView">upperRightView</a></h3>
+<b>Abstract:</b> returns the upper right view of the spreadsheet
+
+<blockquote><pre><tt>- (NSView*)<B>upperRightView;</B> </tt><br>
+</pre></blockquote>
+<p>this method returns the view being used to fill the upper right corner of the spreadsheet
+</p>
+<b>Result:</b> returns the upper right view of the spreadsheet
+ 
+<hr>
+<p>(Last Updated 4/30/2002)
+</p></body></html>

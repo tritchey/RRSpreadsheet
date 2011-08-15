@@ -1,0 +1,18 @@
+README
+
+RRSpreadSheet Component v0J4
+
+This Folder contains the RRSpreadSheet framework, palette test application (all in the ./build directory), as well as source code
+ for all three. In order to use the palette, you must drag the 
+RRSpreadSheet.palette folder to /Developer/Palettes, and 
+RRSpreadSheet.framework to a loction where  InterfaceBuilder can find 
+it (/Library/Frameworks works well).
+
+To distribute the framework with your application, you need only copy the 
+framework to your application bundle's Framework directory.
+
+The framework, palette and a test executable are defined as different
+targets in the ProjectBuidler project file.
+
+Cheers,
+tim

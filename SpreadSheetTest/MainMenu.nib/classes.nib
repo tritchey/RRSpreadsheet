@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = RRSpreadSheet; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {cornerMarker = id; lowerLeftView = id; upperRightView = id; }; 
+            SUPERCLASS = NSScrollView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

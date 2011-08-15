@@ -1,0 +1,790 @@
+<html><head><title>RRSSWorksheet</title></head><body bgcolor="#ffffff"><font face="Geneva,Arial,Helvtica"><h1>RRSSWorksheet</h1></font><hr><br>
+<h2>Abstract</h2>
+the RRSSWorksheet class is the control representing the field of cells in an RRSpreadSheet
+<h2>Discussion</h2>
+the RRSSWorksheet class is the control representing the field of cells in an RRSpreadSheet
+ <hr><br><h2>Methods</h2>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/addColumns:"></a>
+<h3><a name="addColumns:">addColumns:</a></h3>
+<b>Abstract:</b> add <i>count</i> number of columns
+
+<blockquote><pre><tt>- (void)<B>addColumns:</B>(int)<I>count;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>count</tt></td><td>number of columns to add</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/addRows:"></a>
+<h3><a name="addRows:">addRows:</a></h3>
+<b>Abstract:</b> add <I>count</I> number of rows
+
+<blockquote><pre><tt>- (void)<B>addRows:</B>(int)<I>count;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>count</tt></td><td>integer holding the number of new rows to add</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/allowAutoResize"></a>
+<h3><a name="allowAutoResize">allowAutoResize</a></h3>
+<b>Abstract:</b> return the autoresize setting
+
+<blockquote><pre><tt>- (BOOL)<B>allowAutoResize;</B> </tt><br>
+</pre></blockquote>
+<p></p>
+<b>Result:</b> returns a BOOL holding the setting for the autoresize flag
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/beginEditingCell:"></a>
+<h3><a name="beginEditingCell:">beginEditingCell:</a></h3>
+<b>Abstract:</b> begin editing a worksheet cell
+
+<blockquote><pre><tt>- (void)<B>beginEditingCell:</B>(NSCell*)<I>aCell;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>aCell</tt></td><td>the cell to begin editing</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/clm/RRSSWorksheet/cellClass"></a>
+<h3><a name="cellClass">cellClass</a></h3>
+<b>Abstract:</b> return the worksheet cell class
+
+<blockquote><pre><tt>+ (Class)<B>cellClass;</B> </tt><br>
+</pre></blockquote>
+<p></p>
+<b>Result:</b> the class used by the spreadsheet when creating new cells
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/cellPositionForEvent:"></a>
+<h3><a name="cellPositionForEvent:">cellPositionForEvent:</a></h3>
+<b>Abstract:</b> return an RRPosition holding the row/column position for an event
+
+<blockquote><pre><tt>- (RRPosition*)<B>cellPositionForEvent:</B>(NSEvent*)<I>theEvent;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>theEvent</tt></td><td>the event you are interested in</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> an RRPosition object holding the row/column within which <i>theEvent</i> occured
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/cellSize:"></a>
+<h3><a name="cellSize:">cellSize:</a></h3>
+<b>Abstract:</b> return the default cell size
+
+<blockquote><pre><tt>- (NSSize)<B>cellSize;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<b>Result:</b> an NSSize holding the default worksheet cell size
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/cells"></a>
+<h3><a name="cells">cells</a></h3>
+<b>Abstract:</b> return all worksheet cells
+
+<blockquote><pre><tt>- (NSMutableDictionary*)<B>cells;</B> </tt><br>
+</pre></blockquote>
+<p>This method returns a dictionary holding all of the worksheets
+cells keyed with RRPosition objects
+</p>
+<b>Result:</b> an NSMutableDictionary holding all of the worksheet's cells
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/clearWorksheet"></a>
+<h3><a name="clearWorksheet">clearWorksheet</a></h3>
+<b>Abstract:</b> clear all data from the worksheet view
+
+<blockquote><pre><tt>- (void)<B>clearWorksheet;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/columns"></a>
+<h3><a name="columns">columns</a></h3>
+<b>Abstract:</b> return an array holding all of the columns in the worksheet
+
+<blockquote><pre><tt>- (NSArray*)<B>columns;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<b>Result:</b> returns and NSArray holding all of the columns in the worksheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/createCellForRow:column:"></a>
+<h3><a name="createCellForRow:column:">createCellForRow:column:</a></h3>
+<b>Abstract:</b> create a new cell for a row/column
+
+<blockquote><pre><tt>- (id)<B>createCellForRow:</B>(int)<I>row</I> <B>column:</B>(int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>worksheet row index</td><tr>
+<tr><td align = "center"><tt>column</tt></td><td>worksheet column</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> returns the newly created cell object
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/dataSource"></a>
+<h3><a name="dataSource">dataSource</a></h3>
+<b>Abstract:</b> return the datasource for this worksheet
+
+<blockquote><pre><tt>- (id)<B>dataSource;</B> </tt><br>
+</pre></blockquote>
+<p>This method retuns the current datasource object
+for this worksheet
+</p>
+<b>Result:</b> the worksheet's current datasource object
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/deselectAllCells"></a>
+<h3><a name="deselectAllCells">deselectAllCells</a></h3>
+<b>Abstract:</b> deselect all currently selected cells
+
+<blockquote><pre><tt>- (void)<B>deselectAllCells;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/deselectCellAtRow:column:"></a>
+<h3><a name="deselectCellAtRow:column:">deselectCellAtRow:column:</a></h3>
+<b>Abstract:</b> deselect a cell by row/column
+
+<blockquote><pre><tt>- (void)<B>deselectCellAtRow:</B>(int)<I>row</I> <B>column:</B>(int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer row index</td><tr>
+<tr><td align = "center"><tt>column</tt></td><td>integer column index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/deselectColumn:"></a>
+<h3><a name="deselectColumn:">deselectColumn:</a></h3>
+<b>Abstract:</b> deselect all cells in a column
+
+<blockquote><pre><tt>- (void)<B>deselectColumn:</B>(int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>column</tt></td><td>integer column index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/deselectRow:"></a>
+<h3><a name="deselectRow:">deselectRow:</a></h3>
+<b>Abstract:</b> deselect all cells in a row
+
+<blockquote><pre><tt>- (void)<B>deselectRow:</B>(int)<I>row;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer row index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/deselectSelectedCell"></a>
+<h3><a name="deselectSelectedCell">deselectSelectedCell</a></h3>
+<b>Abstract:</b> deselect the last selected cell
+
+<blockquote><pre><tt>- (void)<B>deselectSelectedCell;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/dirtyColumnRange"></a>
+<h3><a name="dirtyColumnRange">dirtyColumnRange</a></h3>
+<b>Abstract:</b> return the range of dirty columns
+
+<blockquote><pre><tt>- (NSRange)<B>dirtyColumnRange;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/dirtyRowRange"></a>
+<h3><a name="dirtyRowRange">dirtyRowRange</a></h3>
+<b>Abstract:</b> return the range of dirty rows
+
+<blockquote><pre><tt>- (NSRange)<B>dirtyRowRange;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/heightForRow:"></a>
+<h3><a name="heightForRow:">heightForRow:</a></h3>
+<b>Abstract:</b> return the row height
+
+<blockquote><pre><tt>- (float)<B>heightForRow:</B>(unsigned int)<I>row;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer index of the row</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/indexOfObjectInArray:forLocation:"></a>
+<h3><a name="indexOfObjectInArray:forLocation:">indexOfObjectInArray:forLocation:</a></h3>
+<b>Abstract:</b> return the index of a row/column in an array based on its location
+
+<blockquote><pre><tt>- (int)<B>indexOfObjectInArray:</B>(NSArray*)<I>array</I> <B>forLocation:</B>(float)<I>location;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/initWithFrame:cellSize:"></a>
+<h3><a name="initWithFrame:cellSize:">initWithFrame:cellSize:</a></h3>
+<b>Abstract:</b> class initialization method.
+
+<blockquote><pre><tt>- (id)<B>initWithFrame:</B>(NSRect)<I>rect</I> <B>cellSize:</B>(NSSize)<I>size;</I> </tt><br>
+</pre></blockquote>
+<p>class initialization method. This is the default initialization method
+for the class
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>rect</tt></td><td>an NSRect holding the new control's frame</td><tr>
+<tr><td align = "center"><tt>size</tt></td><td>the default cell size for the worksheet</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> returns the initialized object, or nil
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/insertColumn:"></a>
+<h3><a name="insertColumn:">insertColumn:</a></h3>
+<b>Abstract:</b> insert column at <i>index</i>
+
+<blockquote><pre><tt>- (void)<B>insertColumn:</B>(unsigned int)<I>index;</I> </tt><br>
+</pre></blockquote>
+<p><b>NOT IMPLEMENTED YET</b>
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>index</tt></td><td>integer for new column index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/insertRow:"></a>
+<h3><a name="insertRow:">insertRow:</a></h3>
+<b>Abstract:</b> insert a row at <I>index</I>
+
+<blockquote><pre><tt>- (void)<B>insertRow:</B>(unsigned int)<I>row;</I> </tt><br>
+</pre></blockquote>
+<p><b>NOT IMPLEMENTED YET</b>
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer holding the index for the inserted row</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/rangeForArray:inFloatRange"></a>
+<h3><a name="rangeForArray:inFloatRange">rangeForArray:inFloatRange</a></h3>
+<b>Abstract:</b> return the range of row/column indecies that cover the viewable range
+
+<blockquote><pre><tt>- (NSRange)<B>rangeForArray:</B>(NSArray*)<I>array</I> <B>inFloatRange:</B>(RRFloatRange)<I>range;</I> </tt><br>
+</pre></blockquote>
+<p>This method returns the range of row or column indicies which are known
+to cover the visible bounds specified in <i>range</i>. This method is used to determine
+which rows or columns are currently visible.
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>array</tt></td><td>an array holding either the list of row or column headers</td><tr>
+<tr><td align = "center"><tt>range</tt></td><td>the visible range we are interested in</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> NSRange with the range of headers covering <i>range</i>
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/reloadCellDataAtRow:column:"></a>
+<h3><a name="reloadCellDataAtRow:column:">reloadCellDataAtRow:column:</a></h3>
+<b>Abstract:</b> reload the data for a cell
+
+<blockquote><pre><tt>- (void)<B>reloadCellDataAtRow:</B>(int)<I>row</I> <B>column:</B>(int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>This method causes the worksheet to poll its data source
+for the contents of cell <i>row</i>/<i>column</i> and display the value
+received.
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer row index</td><tr>
+<tr><td align = "center"><tt>column</tt></td><td>integer column index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/reloadWorksheetData"></a>
+<h3><a name="reloadWorksheetData">reloadWorksheetData</a></h3>
+<b>Abstract:</b> reload all worksheet cells
+
+<blockquote><pre><tt>- (void)<B>reloadWorksheetData;</B> </tt><br>
+</pre></blockquote>
+<p>This method causes the worksheet to query its
+data source for the object values for all its cells and redisplay
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/removeAllColumns"></a>
+<h3><a name="removeAllColumns">removeAllColumns</a></h3>
+<b>Abstract:</b> remove all columns in worksheet
+
+<blockquote><pre><tt>- (void)<B>removeAllColumns;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/removeAllRows"></a>
+<h3><a name="removeAllRows">removeAllRows</a></h3>
+<b>Abstract:</b> remove all rows in the worksheet
+
+<blockquote><pre><tt>- (void)<B>removeAllRows;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/removeColumn:"></a>
+<h3><a name="removeColumn:">removeColumn:</a></h3>
+<b>Abstract:</b> remove column at <i>column</i>
+
+<blockquote><pre><tt>- (void)<B>removeColumn:</B>(unsigned int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>column</tt></td><td>integer index of column to remove</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/removeRow:"></a>
+<h3><a name="removeRow:">removeRow:</a></h3>
+<b>Abstract:</b> remove row at <i>index</i>
+
+<blockquote><pre><tt>- (void)<B>removeRow:</B>(unsigned int)<I>row;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer index of row to remove</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/resizeColumn:range:"></a>
+<h3><a name="resizeColumn:range:">resizeColumn:range:</a></h3>
+<b>Abstract:</b> resize column to new range
+
+<blockquote><pre><tt>- (void)<B>resizeColumn:</B>(unsigned int)<I>column</I> <B>range:</B>(RRFloatRange)<I>range;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>column</tt></td><td>integer index of column to resize</td><tr>
+<tr><td align = "center"><tt>range</tt></td><td>RRFloatRange holding new location and length for column</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/resizeRow:range:"></a>
+<h3><a name="resizeRow:range:">resizeRow:range:</a></h3>
+<b>Abstract:</b> resize a row vertically
+
+<blockquote><pre><tt>- (void)<B>resizeRow:</B>(unsigned int)<I>index</I> <B>range:</B>(RRFloatRange)<I>range;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>index</tt></td><td>index of the row to resize</td><tr>
+<tr><td align = "center"><tt>range</tt></td><td>an RRFloatRange holding the new location and length of the row</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/rows"></a>
+<h3><a name="rows">rows</a></h3>
+<b>Abstract:</b> return all rows in the worksheet
+
+<blockquote><pre><tt>- (NSArray*)<B>rows;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<b>Result:</b> an NSArray holding all of the rows in the worksheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/selectCell:"></a>
+<h3><a name="selectCell:">selectCell:</a></h3>
+<b>Abstract:</b> deselect a cell
+
+<blockquote><pre><tt>- (void)<B>deselectCell:</B>(NSCell*)<I>aCell;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>aCell</tt></td><td>cell to deselect</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/selectCellAtRow:column:"></a>
+<h3><a name="selectCellAtRow:column:">selectCellAtRow:column:</a></h3>
+<b>Abstract:</b> select a cell in the worksheet by row/column
+
+<blockquote><pre><tt>- (void)<B>selectCellAtRow:</B>(int)<I>row</I> <B>column:</B>(int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer row index</td><tr>
+<tr><td align = "center"><tt>column</tt></td><td>integer column index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/selectColumn:"></a>
+<h3><a name="selectColumn:">selectColumn:</a></h3>
+<b>Abstract:</b> select an entire column
+
+<blockquote><pre><tt>- (void)<B>selectColumn:</B>(int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>column</tt></td><td>integer column index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/selectRow:"></a>
+<h3><a name="selectRow:">selectRow:</a></h3>
+<b>Abstract:</b> select an entire row
+
+<blockquote><pre><tt>- (void)<B>selectRow:</B>(int)<I>row;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>integer row index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/selectedCells"></a>
+<h3><a name="selectedCells">selectedCells</a></h3>
+<b>Abstract:</b> return all selected cells in the worksheet
+
+<blockquote><pre><tt>- (NSArray*)<B>selectedCells;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<b>Result:</b> returns an array of all selected cells in the worksheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/setAllowAutoResize:"></a>
+<h3><a name="setAllowAutoResize:">setAllowAutoResize:</a></h3>
+<b>Abstract:</b> set the worksheet's auto resizing parameter
+
+<blockquote><pre><tt>- (void)<B>setAllowAutoResize:</B>(BOOL)<I>allow;</I> </tt><br>
+</pre></blockquote>
+<p>the method determines whether the worksheet automatically
+adds rows and columns to fill the spreadsheet view
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>allow</tt></td><td>YES = allow the worksheet to resize automatically, NO = do not
+allow the worksheet to automatically resize</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/clm/RRSSWorksheet/setCellClass:"></a>
+<h3><a name="setCellClass:">setCellClass:</a></h3>
+<b>Abstract:</b> set the worksheet cell class
+
+<blockquote><pre><tt>+ (void)<B>setCellClass:</B>(Class)<I>cellClass;</I> </tt><br>
+</pre></blockquote>
+<p>set the prototype class for the worksheet. This class will be used for
+all of the worksheet cells
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>cellClass</tt></td><td>the cell class</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/setCellSize:"></a>
+<h3><a name="setCellSize:">setCellSize:</a></h3>
+<b>Abstract:</b> set the default cell size
+
+<blockquote><pre><tt>- (void)<B>setCellSize:</B>(NSSize)<I>size;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>size</tt></td><td>the new default cell size</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/setColumns:"></a>
+<h3><a name="setColumns:">setColumns:</a></h3>
+<b>Abstract:</b> set the columns of the worksheet
+
+<blockquote><pre><tt>- (void)<B>setColumns:</B>(NSMutableArray*)<I>array;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>array</tt></td><td>array holding the new RRSSHeader columns of the worksheet</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/setDatasource:"></a>
+<h3><a name="setDatasource:">setDatasource:</a></h3>
+<b>Abstract:</b> the the worksheet datasource
+
+<blockquote><pre><tt>- (void)<B>setDatasource:</B>(id)<I>ds;</I> </tt><br>
+</pre></blockquote>
+<p>set the data source for the worksheet. The datasource must implement
+the RRSpreadSheetDataSource as defined in RRSpreadSheet
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>ds</tt></td><td>the new worksheet data source</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/setRows:"></a>
+<h3><a name="setRows:">setRows:</a></h3>
+<b>Abstract:</b> set the rows of the worksheet
+
+<blockquote><pre><tt>- (void)<B>setRows:</B>(NSMutableArray*)<I>array;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>array</tt></td><td>an array of RRSSHeaders holding the new rows of the worksheet</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/setRulerForSelectionFocus:"></a>
+<h3><a name="setRulerForSelectionFocus:">setRulerForSelectionFocus:</a></h3>
+<b>Abstract:</b> sets the ruler that should have selection focus
+
+<blockquote><pre><tt>- (void)<B>setRulerForSelectionFocus:</B>(RRSSRulerView*)<I>ruler;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>ruler</tt></td><td>the ruler to receive selection focus</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/spreadsheet"></a>
+<h3><a name="spreadsheet">spreadsheet</a></h3>
+<b>Abstract:</b> return the enclosing spreadsheet for this worksheet
+
+<blockquote><pre><tt>- (id)<B>spreadsheet;</B> </tt><br>
+</pre></blockquote>
+<p></p>
+<b>Result:</b> returns the enclosing spreadsheet object
+ 
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/updateDirtyRangesForRect:"></a>
+<h3><a name="updateDirtyRangesForRect:">updateDirtyRangesForRect:</a></h3>
+<b>Abstract:</b> compute the row/column ranges within rect
+
+<blockquote><pre><tt>- (void)<B>updateDirtyRangesForRect:</B>(NSRect)<I>rect;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>rect</tt></td><td>dirty NSRect</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/updateMarkers"></a>
+<h3><a name="updateMarkers">updateMarkers</a></h3>
+<b>Abstract:</b> get the worksheet to update the ruler markers
+
+<blockquote><pre><tt>- (void)<B>updateMarkers;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/updateVisibleRangesForRect:"></a>
+<h3><a name="updateVisibleRangesForRect:">updateVisibleRangesForRect:</a></h3>
+<b>Abstract:</b> compute the visible rows/columns inthe worksheet
+
+<blockquote><pre><tt>- (void)<B>updateVisibleRangesForRect:</B>(NSRect)<I>rect;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>rect</tt></td><td>visible NSRect</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/visibleCellPositions"></a>
+<h3><a name="visibleCellPositions">visibleCellPositions</a></h3>
+<b>Abstract:</b> return the visible cell positions
+
+<blockquote><pre><tt>- (NSArray*)<B>visibleCellPositions;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/visibleColumnRange"></a>
+<h3><a name="visibleColumnRange">visibleColumnRange</a></h3>
+<b>Abstract:</b> return the range of visible columns
+
+<blockquote><pre><tt>- (NSRange)<B>visibleColumnRange;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/visibleColumns"></a>
+<h3><a name="visibleColumns">visibleColumns</a></h3>
+<b>Abstract:</b> return the visible columns
+
+<blockquote><pre><tt>- (NSArray*)<B>visibleColumns;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/visibleFrameForRect:"></a>
+<h3><a name="visibleFrameForRect:">visibleFrameForRect:</a></h3>
+<b>Abstract:</b> return the visible portion of a rectangle
+
+<blockquote><pre><tt>- (NSRect)<B>visibleFrameForRect:</B>(NSRect)<I>rect;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/visibleRowRange"></a>
+<h3><a name="visibleRowRange">visibleRowRange</a></h3>
+<b>Abstract:</b> return the range of visible rows
+
+<blockquote><pre><tt>- (NSRange)<B>visibleRowRange;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/visibleRows"></a>
+<h3><a name="visibleRows">visibleRows</a></h3>
+<b>Abstract:</b> return the visible rows
+
+<blockquote><pre><tt>- (NSArray*)<B>visibleRows;</B> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+ </p>
+<hr>
+<a name="//apple_ref/occ/instm/RRSSWorksheet/widthForColumn"></a>
+<h3><a name="widthForColumn">widthForColumn</a></h3>
+<b>Abstract:</b> return the width of a column
+
+<blockquote><pre><tt>- (float)<B>widthForColumn:</B>(unsigned int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>description forthcoming
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>column</tt></td><td>integer index of column</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> width of the column
+ 
+<hr>
+<p>(Last Updated 4/30/2002)
+</p></body></html>

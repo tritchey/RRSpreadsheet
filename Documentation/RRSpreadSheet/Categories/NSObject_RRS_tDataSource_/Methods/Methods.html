@@ -1,0 +1,194 @@
+<html><head><title>Methods</title></head><body bgcolor="#ffffff"><font face="Geneva,Arial,Helvtica"><h1>Methods</h1></font><hr><br>
+<a name="//apple_ref/occ/instm/NSObject/numberOfColumnsInWorksheet:"></a>
+<h3><a name="numberOfColumnsInWorksheet:">numberOfColumnsInWorksheet:</a></h3>
+<b>Abstract:</b> return the number of columns in the worksheet
+
+<blockquote><pre><tt>- (int)<B>numberOfColumnsInWorksheet:</B>(RRSSWorksheet*)<I>worksheet;</I> </tt><br>
+</pre></blockquote>
+<p>This method is called by the worksheet to determine the number of columns it needs to
+create to support the data source. Note that if autoresizing is enabled, then the number
+of columns may increase beyond this number
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>worksheet</tt></td><td>the requesting worksheet</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> the data source object must return an integer with the number of columns
+needed in the worksheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/numberOfRowsInWorksheet:"></a>
+<h3><a name="numberOfRowsInWorksheet:">numberOfRowsInWorksheet:</a></h3>
+<b>Abstract:</b> return the number of rows in the worksheet
+
+<blockquote><pre><tt>- (int)<B>numberOfRowsInWorksheet:</B>(RRSSWorksheet*)<I>worksheet;</I> </tt><br>
+</pre></blockquote>
+<p>This method is called by the worksheet to determine the number of rows it needs to
+create to support the data source. Note that if autoresizing is enabled, then the number
+of rows may increase beyond this number
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>worksheet</tt></td><td>the requesting worksheet</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> the data source object must return an integer with the number of rows
+needed in the worksheet
+ 
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:acceptDrop:row:column:dropOperation:"></a>
+<h3><a name="worksheet:acceptDrop:row:column:dropOperation:">worksheet:acceptDrop:row:column:dropOperation:</a></h3>
+<b>Abstract:</b> documentation forthcoming
+ 
+<blockquote><pre><tt>- (BOOL)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>acceptDrop:</B>(id <NSDraggingInfo>)<I>info
+</I> <B>row:</B>(int)<I>row</I> <B>column:</B>(int)<I>col</I> <B>dropOperation:</B>(NSTableViewDropOperation)<I>op;</I> </tt><br>
+</pre></blockquote>
+<p></p>
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:headerLabelForColumn:"></a>
+<h3><a name="worksheet:headerLabelForColumn:">worksheet:headerLabelForColumn:</a></h3>
+<b>Abstract:</b> return the label for a column
+
+<blockquote><pre><tt>- (NSString*)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>headerLabelForColumn:</B>(int)<I>col;</I> </tt><br>
+</pre></blockquote>
+<p>this method is used to ask the datasource for the label
+for the header of specific columns. If this method is not implemented
+by the datasource, the worksheet will use default header labels
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>this is an integer holding the row number of the header</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> the data source must return an NSString holding the label
+for the header.
+ 
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:headerLabelForRow:"></a>
+<h3><a name="worksheet:headerLabelForRow:">worksheet:headerLabelForRow:</a></h3>
+<b>Abstract:</b> return the label for a row
+
+<blockquote><pre><tt>- (NSString*)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>headerLabelForRow:</B>(int)<I>row;</I> </tt><br>
+</pre></blockquote>
+<p>this method is used to ask the datasource for the label
+for the header of specific rows. If this method is not implemented
+by the datasource, the worksheet will use default header labels
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>row</tt></td><td>this is an integer holding the row number of the header</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> the data source must return an NSString holding the label
+for the header.
+ 
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:objectValueForRow:column:"></a>
+<h3><a name="worksheet:objectValueForRow:column:">worksheet:objectValueForRow:column:</a></h3>
+<b>Abstract:</b> returns the value of a worksheet cell for a row/column
+
+<blockquote><pre><tt>- (id)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>objectValueForRow:</B>(unsigned int)<I>row</I> <B>column:</B>(int)<I>col;</I> </tt><br>
+</pre></blockquote>
+<p>This method is called by the worksheet on the data source to determine
+the value of a cell. The current implementation expects an NSString object from the
+data source
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>worksheet</tt></td><td>the worksheet requesting the row/column value</td><tr>
+<tr><td align = "center"><tt>row</tt></td><td>the row of the needed object value</td><tr>
+<tr><td align = "center"><tt>col</tt></td><td>the column of the needed object value</td><tr>
+</table>
+</blockquote>
+<b>Result:</b> the data source should return the value of the cell at the given row and column.
+The current implementation expects an NSString object.
+ 
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:setHeaderLabel:forColumn:"></a>
+<h3><a name="worksheet:setHeaderLabel:forColumn:">worksheet:setHeaderLabel:forColumn:</a></h3>
+<b>Abstract:</b> tell the datasource that a column header label has changed
+
+<blockquote><pre><tt>- (void)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>setHeaderLabel:</B>(NSString*)<I>label</I> <B>forColumn:</B>(int)<I>column;</I> </tt><br>
+</pre></blockquote>
+<p>this method is used by the worksheet to tell its datasource
+when the label for a header has changed
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>worksheet</tt></td><td>the calling worksheet</td><tr>
+<tr><td align = "center"><tt>label</tt></td><td>the new header label</td><tr>
+<tr><td align = "center"><tt>column</tt></td><td>the header's column index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:setHeaderLabel:forRow:"></a>
+<h3><a name="worksheet:setHeaderLabel:forRow:">worksheet:setHeaderLabel:forRow:</a></h3>
+<b>Abstract:</b> tell the datasource that a row header label has changed
+
+<blockquote><pre><tt>- (void)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>setHeaderLabel:</B>(NSString*)<I>label</I> <B>forRow:</B>(int)<I>row;</I> </tt><br>
+</pre></blockquote>
+<p>this method is used by the worksheet to tell its datasource
+when the label for a header has changed
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>worksheet</tt></td><td>the calling worksheet</td><tr>
+<tr><td align = "center"><tt>label</tt></td><td>the new header label</td><tr>
+<tr><td align = "center"><tt>row</tt></td><td>the header's row index</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:setObjectValue:forRow:column:"></a>
+<h3><a name="worksheet:setObjectValue:forRow:column:">worksheet:setObjectValue:forRow:column:</a></h3>
+<b>Abstract:</b> tell the datasource that a cell value has changed
+
+<blockquote><pre><tt>- (void)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>setObjectValue:</B>(id)<I>object</I> <B>forRow:</B>(int)<I>row</I> <B>column:</B>(int)<I>col;</I> </tt><br>
+</pre></blockquote>
+<p>this method is used by the worksheet to tell its datasource
+when the value of a cell has changed
+</p>
+<h4>Parameters</h4>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>worksheet</tt></td><td>the calling worksheet</td><tr>
+<tr><td align = "center"><tt>object</tt></td><td>the new object for the cell</td><tr>
+<tr><td align = "center"><tt>row</tt></td><td>the cell's row</td><tr>
+<tr><td align = "center"><tt>column</tt></td><td>the cell's column</td><tr>
+</table>
+</blockquote>
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:validateDrop:proposedRow:column:proposedDropOperation:"></a>
+<h3><a name="worksheet:validateDrop:proposedRow:column:proposedDropOperation:">worksheet:validateDrop:proposedRow:column:proposedDropOperation:</a></h3>
+<b>Abstract:</b> documentation forthcoming
+ 
+<blockquote><pre><tt>- (NSDragOperation)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>validateDrop:</B>(id <NSDraggingInfo>)<I>info
+</I> <B>proposedRow:</B>(int)<I>row</I> <B>column:</B>(int)<I>col</I> <B>proposedDropOperation:</B>(NSTableViewDropOperation)<I>op;</I> </tt><br>
+</pre></blockquote>
+<p></p>
+<hr>
+<a name="//apple_ref/occ/instm/NSObject/worksheet:writeCells:toPasteboard:"></a>
+<h3><a name="worksheet:writeCells:toPasteboard:">worksheet:writeCells:toPasteboard:</a></h3>
+<b>Abstract:</b> documentation forthcoming
+ 
+<blockquote><pre><tt>- (BOOL)<B>worksheet:</B>(RRSSWorksheet*)<I>worksheet</I> <B>writeCells:</B>(NSArray*)<I>cells</I> <B>toPasteboard:</B>(NSPasteboard*)<I>pboard;</I> </tt><br>
+</pre></blockquote>
+<p></p>
+<hr>
+<p>(Last Updated 4/30/2002)
+</p></body></html>

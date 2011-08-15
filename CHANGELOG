@@ -1,0 +1,15 @@
+0J4
+- integrated Olivier's changes. some, but not all, of the changes were:
+- use a single prototype cell for all worksheet elements
+- updated selection routines
+- moved all default data source routines out of worksheet into a separate class
+- added several delegate methods for the worksheet
+- updated responder routines
+- cut-n-paste/drag-n-drop support!
+
+
+0J3
+- Additional fixes related to the Jag update
+
+0J2
+- Got the spreadsheet working under Jag

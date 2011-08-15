@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RRSpreadSheet; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = RRSpreadSheetPalette; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {view = RRSpreadSheet; }; 
+            SUPERCLASS = IBPalette; 
+        }
+    ); 
+    IBVersion = 1; 
+}
